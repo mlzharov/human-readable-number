@@ -2,6 +2,8 @@ module.exports = function toReadable (n) {
 var ones = Array("", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen");
 var tens = Array("", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety");
 var hundreds = Math.floor(n / 100);
+
+if(n===0)return 'zero';
 n -= hundreds * 100;
 var ten = Math.floor(n / 10);
 n -= ten * 10 ;
